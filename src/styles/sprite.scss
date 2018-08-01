@@ -1,0 +1,178 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$basket-name: 'basket';
+$basket-x: 140px;
+$basket-y: 64px;
+$basket-offset-x: -140px;
+$basket-offset-y: -64px;
+$basket-width: 16px;
+$basket-height: 13px;
+$basket-total-width: 211px;
+$basket-total-height: 128px;
+$basket-image: '../img/sprite.png';
+$basket: (140px, 64px, -140px, -64px, 16px, 13px, 211px, 128px, '../img/sprite.png', 'basket', );
+$check-name: 'check';
+$check-x: 116px;
+$check-y: 88px;
+$check-offset-x: -116px;
+$check-offset-y: -88px;
+$check-width: 15px;
+$check-height: 12px;
+$check-total-width: 211px;
+$check-total-height: 128px;
+$check-image: '../img/sprite.png';
+$check: (116px, 88px, -116px, -88px, 15px, 12px, 211px, 128px, '../img/sprite.png', 'check', );
+$gear-1-name: 'gear-1';
+$gear-1-x: 0px;
+$gear-1-y: 0px;
+$gear-1-offset-x: 0px;
+$gear-1-offset-y: 0px;
+$gear-1-width: 78px;
+$gear-1-height: 59px;
+$gear-1-total-width: 211px;
+$gear-1-total-height: 128px;
+$gear-1-image: '../img/sprite.png';
+$gear-1: (0px, 0px, 0px, 0px, 78px, 59px, 211px, 128px, '../img/sprite.png', 'gear-1', );
+$gear-2-name: 'gear-2';
+$gear-2-x: 83px;
+$gear-2-y: 0px;
+$gear-2-offset-x: -83px;
+$gear-2-offset-y: 0px;
+$gear-2-width: 77px;
+$gear-2-height: 56px;
+$gear-2-total-width: 211px;
+$gear-2-total-height: 128px;
+$gear-2-image: '../img/sprite.png';
+$gear-2: (83px, 0px, -83px, 0px, 77px, 56px, 211px, 128px, '../img/sprite.png', 'gear-2', );
+$gear-3-name: 'gear-3';
+$gear-3-x: 0px;
+$gear-3-y: 64px;
+$gear-3-offset-x: 0px;
+$gear-3-offset-y: -64px;
+$gear-3-width: 63px;
+$gear-3-height: 64px;
+$gear-3-total-width: 211px;
+$gear-3-total-height: 128px;
+$gear-3-image: '../img/sprite.png';
+$gear-3: (0px, 64px, 0px, -64px, 63px, 64px, 211px, 128px, '../img/sprite.png', 'gear-3', );
+$gear-4-name: 'gear-4';
+$gear-4-x: 68px;
+$gear-4-y: 64px;
+$gear-4-offset-x: -68px;
+$gear-4-offset-y: -64px;
+$gear-4-width: 43px;
+$gear-4-height: 63px;
+$gear-4-total-width: 211px;
+$gear-4-total-height: 128px;
+$gear-4-image: '../img/sprite.png';
+$gear-4: (68px, 64px, -68px, -64px, 43px, 63px, 211px, 128px, '../img/sprite.png', 'gear-4', );
+$gear-5-name: 'gear-5';
+$gear-5-x: 165px;
+$gear-5-y: 0px;
+$gear-5-offset-x: -165px;
+$gear-5-offset-y: 0px;
+$gear-5-width: 46px;
+$gear-5-height: 58px;
+$gear-5-total-width: 211px;
+$gear-5-total-height: 128px;
+$gear-5-image: '../img/sprite.png';
+$gear-5: (165px, 0px, -165px, 0px, 46px, 58px, 211px, 128px, '../img/sprite.png', 'gear-5', );
+$gear-6-name: 'gear-6';
+$gear-6-x: 165px;
+$gear-6-y: 63px;
+$gear-6-offset-x: -165px;
+$gear-6-offset-y: -63px;
+$gear-6-width: 42px;
+$gear-6-height: 53px;
+$gear-6-total-width: 211px;
+$gear-6-total-height: 128px;
+$gear-6-image: '../img/sprite.png';
+$gear-6: (165px, 63px, -165px, -63px, 42px, 53px, 211px, 128px, '../img/sprite.png', 'gear-6', );
+$search-name: 'search';
+$search-x: 116px;
+$search-y: 64px;
+$search-offset-x: -116px;
+$search-offset-y: -64px;
+$search-width: 19px;
+$search-height: 19px;
+$search-total-width: 211px;
+$search-total-height: 128px;
+$search-image: '../img/sprite.png';
+$search: (116px, 64px, -116px, -64px, 19px, 19px, 211px, 128px, '../img/sprite.png', 'search', );
+$spritesheet-width: 211px;
+$spritesheet-height: 128px;
+$spritesheet-image: '../img/sprite.png';
+$spritesheet-sprites: ($basket, $check, $gear-1, $gear-2, $gear-3, $gear-4, $gear-5, $gear-6, $search, );
+$spritesheet: (211px, 128px, '../img/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

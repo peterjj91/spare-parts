@@ -1,0 +1,61 @@
+
+.logo {
+  display: inline-block;
+  vertical-align: top;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  width: 180px;
+  height: 56px;
+  background-image: url("../img/logo_white.svg");
+
+  @media(max-width: $screen-md){
+    width: 80px;
+    height: 25px;
+  }
+
+  &:hover, &:focus {
+    opacity: 1;
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5), not all, not all, not all {
+
+  }
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: top;
+
+  &__search {
+     @include sprite($search);
+  }
+
+  &__tube {
+    @include sprite($gear-1);
+  }
+
+  &__loaders {
+    @include sprite($gear-2);
+  }
+
+  &__front-loaders {
+    @include sprite($gear-3);
+  }
+
+  &__gearbox {
+    @include sprite($gear-4);
+  }
+
+  &__motor {
+    @include sprite($gear-5);
+  }
+
+  &__oil {
+    @include sprite($gear-6);
+  }
+
+  &__basket {
+    @include sprite($basket);
+  }
+}

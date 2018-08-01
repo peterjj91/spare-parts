@@ -1,0 +1,28 @@
+{
+  "name": "soleness-art",
+  "authors": [
+    "Pasha Popeskul <peterjj91@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "bootstrap-select": "^1.13.1",
+    "fancybox": "^3.3.5",
+    "ion.rangeSlider": "^2.2.0"
+  }
+}

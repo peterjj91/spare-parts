@@ -1,0 +1,47 @@
+button {
+  outline: none;
+  border: none;
+}
+
+.btn {
+  border: none;
+  position: relative;
+  z-index: 1;
+  outline: none !important;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+
+  &:active, &:focus {
+    box-shadow: none;
+    outline: 0px;
+  }
+
+  &__promo {
+    background-color: transparent;
+    color: #585858;
+    padding: 8px 14px 8px 17px;
+    font-size: 17px;
+    border-radius: 0px;
+    border: 1px solid rgba(88, 88, 88, 0.5);
+    @include transition(all .2s ease-in-out);
+
+    @media (max-width: $screen-sm){
+      padding: 3px 8px 2px 10px;
+      font-size: 14px;
+    }
+    @media (max-width: $screen-md){
+
+    }
+
+    &:hover, &:focus {
+      opacity: $opacity-main;
+      color: #585858;
+      text-decoration: none;
+
+      .btn__promo__icon {
+        fill: #585858;
+      }
+    }
+  }
+}

@@ -1,0 +1,165 @@
+
+.article-main {
+  display: flex;
+  @include make-row;
+  margin-left: -50px;
+  margin-right: -50px;
+
+  &__side {
+    @include make-sm-column(5.9);
+    padding-bottom: 186px;
+    flex: 320px;
+    background-color: #fcfcfc;
+
+    &__nav {
+      background-color: #ffca1c;
+      padding-top: 47px;
+      padding-bottom: 30px;
+      margin-bottom: 13px;
+    }
+  }
+
+  &__content {
+    flex: auto;
+    @include make-sm-column(18);
+    @include make-xs-column-push(0.6);
+    padding-bottom: 186px;
+    padding-top: 46px;
+  }
+
+  &__item {
+    @include make-row;
+    margin-bottom: 40px;
+
+    &__content {
+      @include make-xs-column(14.7);
+    }
+
+    &__side {
+      @include make-xs-column-offset(0.5);
+      @include make-xs-column(7.2);
+      //text-align: right;
+
+      &__link {
+        display: inline-block;
+        vertical-align: top;
+        //float: right;
+        margin-top: -3px;
+        margin-bottom: 31px;
+      }
+    }
+
+    &__img {
+      padding: 7px 30px;
+      padding-bottom: 20px;
+      background-color: #f9f9f9;
+      margin-bottom: 39px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      &--mini {
+        padding: 12px 10px;
+        margin-bottom: 30px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__title {
+      margin-bottom: 17px;
+    }
+
+    .navigation {
+      margin-bottom: 50px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &--certificate {
+      margin-bottom: 90px;
+    }
+
+    &--stock {
+      margin-bottom: 92px;
+    }
+  }
+}
+
+.promo-news {
+  padding: 10px 20px 10px 50px;
+  margin-bottom: 10px;
+
+  &__title {
+    font-size: 16px;
+    color: #ff5400;
+    margin-bottom: 12px;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+  }
+
+  li {
+    width: 100%;
+    line-height: 15px;
+    margin-bottom: 13.2px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+    font-weight: bold;
+    
+    &:hover, &:focus {
+      color: #000;
+    }
+  }
+}
+
+.certificate-catalog {
+  @include make-row;
+  margin-left: -20px;
+  margin-right: -20px;
+
+  &__wrapper {
+    overflow: hidden;
+    margin-bottom: 3px;
+  }
+
+  &__block {
+    @include make-xs-column(12);
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    margin-bottom: 30px;
+  }
+
+  &__img {
+    padding: 10px 20px;
+    background-color: #fafafa;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &--index {
+    margin-top: 3px;
+  }
+}

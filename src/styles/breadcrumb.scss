@@ -1,0 +1,82 @@
+
+.breadcrumb {
+  padding: 0;
+  background-color: transparent;
+  margin-bottom: 56px;
+
+  @media(max-width: $screen-md){
+    display: none;
+    margin-bottom: 15px;
+  }
+  @media(max-width: $screen-sm){
+
+  }
+
+  li {
+
+    a {
+      font-size: 14px;
+      color: #585858;
+    }
+
+    & + li::before {
+      content: "";
+      font-size: 14px;
+      padding-left: 6px;
+      padding-right: 6px;
+      background: url(../icons/arrow_right.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 0px 13px 0px 7px;
+    }
+
+    &.active {
+      color: #8c0303;
+    }
+  }
+}
+
+.pagination {
+  margin: 0;
+  font-size: 12px;
+  line-height: normal;
+
+  li {
+    a {
+      line-height: 18px;
+      padding: 0px 3px;
+      border: none;
+      color: #000;
+
+      &:hover, &:focus {
+        color: #000;
+        background-color: transparent;
+      }
+
+      &[aria-label="Previous"] {
+        padding-left: 0;
+        padding-right: 3px;
+        font-size: 14px;
+      }
+
+      &[aria-label="Next"] {
+        padding-right: 0;
+        padding-left: 3px;
+        font-size: 14px;
+      }
+    }
+
+    &.active {
+      a {
+        background: transparent;
+        font-size: 14px;
+        color: #ff4d00;
+
+        &:hover, &:focus {
+          color: #ff4d00;
+          background: transparent;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.content {
+  background-color: #fff;
+
+  @media(max-width: $screen-sm){
+    
+  }
+
+  &__container {
+    @extend .container;
+  }
+}
+
+

@@ -1,0 +1,29 @@
+
+.nav {
+  
+}
+
+.promo-nav {
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+
+  li {
+    width: 100%;
+    padding: 0px 30px 0px 50px;
+    margin-bottom: 19px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+
+    &:hover, &:focus {
+      color: #000;
+    }
+  }
+}

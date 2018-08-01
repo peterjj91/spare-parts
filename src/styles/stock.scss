@@ -1,0 +1,56 @@
+
+.promo-stock {
+  display: inline-block;
+  width: 100%;
+  border: 2px solid #ffde00;
+  padding: 29px 27px;
+  background-color: #f9f9f9;
+
+  &__img {
+    float: left;
+    width: 167px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__description {
+    padding-left: 190px;
+
+    p {
+
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    vertical-align: top;
+    font-family: $cuprum;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: -3px;
+    line-height: 22px;
+    margin-bottom: 16px;
+    color: #000;
+
+    &:hover, &:focus {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+
+  &--full {
+    .promo-stock {
+      &__img {
+        width: 100%;
+        max-width: 161px;
+        margin-bottom: 17px;
+      }
+
+      &__description {
+        padding-left: 0;
+      }
+    }
+  }
+}

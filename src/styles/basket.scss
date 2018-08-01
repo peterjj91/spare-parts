@@ -1,0 +1,29 @@
+.basket-mini {
+  color: white;
+  font-size: 14px;
+  position: relative;
+
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+  }
+
+  &__input {
+    height: 24px;
+    border: 1px solid #ffc600;
+    background: transparent;
+    width: 101px;
+    padding: 0px 17px 0px 0px;
+    color: white;
+    font-size: 14px;
+    text-align: right;
+  }
+
+  &__currency {
+    position: absolute;
+    top: 4px;
+    right: 7px;
+    pointer-events: none;
+  }
+}
