@@ -8,10 +8,15 @@ body{
   color: black;
   font-size: 14px;
   line-height: normal;
+  padding-top: 506px;
 
-  @media(max-width: $screen-md){
+  @media(max-width: $screen-sm){
+    //padding-top: 280px;
+    padding-top: 300px;
     font-size: 13px;
-    padding-top: 83px;
+  }
+  @media(max-width: $screen-xs){
+    //padding-top: 300px;
   }
 }
 

@@ -1,3 +1,181 @@
+
+.basket-promo {
+  margin-top: 37px;
+
+  @media(max-width: $screen-sm){
+    margin-top: 0;
+  }
+
+  &__content {
+    margin-top: 53px;
+    margin-bottom: 42px;
+  }
+
+  &__total {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+
+    &__buy {
+      float: right;
+    }
+  }
+
+  &__close {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 13px;
+    color: #999999;
+  }
+
+  &__ordering {
+    @include make-row;
+    margin-top: 33px;
+
+    @media(max-width: $screen-sm){
+      margin-top: 0;
+    }
+
+    &__content {
+      @include make-xs-column(24);
+      @include make-sm-column(15.8);
+    }
+
+    &__side {
+      @include make-xs-column(24);
+      @include make-sm-column(7.7);
+      @include make-sm-column-offset(0.5);
+    }
+
+    &__info {
+      padding: 23px 20px;
+      margin: 34px 0px 10px 0px;
+      list-style: none;
+      border: 2px solid #ffd200;
+      background-color: #fcfcfc;
+
+      li {
+        width: 100%;
+        margin-bottom: 16px;
+
+        &:last-child {
+          margin-bottom: 0;
+
+          .head-h4 {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    &__block {
+      margin-bottom: 117px;
+
+      @media(max-width: $screen-sm){
+        margin-bottom: 100px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__nav {
+      width: 100%;
+      display: inline-block;
+      vertical-align: top;
+      padding-bottom: 14px;
+      border-bottom: 2px solid #ffd200;
+      margin-bottom: 30px;
+
+      &__title {
+        float: left;
+
+        & > *[class^="head"] {
+          margin-bottom: 0;
+        }
+      }
+
+      &__edit {
+        float: right;
+        margin-top: 2px;
+        font-size: 14px;
+        color: #000;
+        text-decoration: underline;
+
+        &:hover, &:focus {
+          color: #000;
+        }
+      }
+    }
+
+    &__next {
+      display: flex;
+      flex-direction: row;
+      margin-top: 13px;
+      text-align: right;
+      background-color: #fcfcfc;
+
+      .btn {
+        min-width: 126px;
+      }
+
+      &--few {
+        justify-content: space-between;
+      }
+    }
+
+    &__choose {
+      padding: 0;
+      list-style: none;
+      margin-bottom: 20px;
+
+      li {
+        display: inline-block;
+        margin-right: 47px;
+        margin-bottom: 10px;
+
+        @media(max-width: $screen-sm){
+          margin-right: 0;
+          padding-right: 20px;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &__location {
+      font-size: 14px;
+      margin-bottom: 29px;
+
+      p {
+        margin-bottom: 20px;
+      }
+
+      &__city {
+        background-color: #eeeeee;
+        display: inline-block;
+        vertical-align: top;
+        min-width: 123px;
+        min-height: 40px;
+        text-align: center;
+        line-height: 40px;
+      }
+    }
+
+    &__total {
+      margin-top: 29px;
+      text-align: right;
+
+      .btn {
+        margin-top: 29px;
+      }
+    }
+  }
+}
+
 .basket-mini {
   color: white;
   font-size: 14px;
@@ -7,6 +185,15 @@
     display: inline-block;
     vertical-align: middle;
     margin-right: 4px;
+    color: white;
+
+    &:hover, &:focus {
+      color: white;
+    }
+
+    @media(max-width: $screen-sm){
+      color: #ffc600;
+    }
   }
 
   &__input {
@@ -18,6 +205,10 @@
     color: white;
     font-size: 14px;
     text-align: right;
+
+    @media(max-width: $screen-sm){
+      display: none;
+    }
   }
 
   &__currency {
@@ -25,5 +216,9 @@
     top: 4px;
     right: 7px;
     pointer-events: none;
+
+    @media(max-width: $screen-sm){
+      display: none;
+    }
   }
 }

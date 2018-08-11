@@ -12,12 +12,71 @@
     padding-bottom: 30px;
     margin-bottom: 30px;
     border-bottom: 2px solid #ffde00;
+
+    @media(max-width: $screen-sm){
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+    }
+
+    &:last-child {
+      @media(max-width: $screen-sm){
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__row {
+    @include make-row;
+    margin-left: -20px;
+    margin-right: -20px;
+
+    @media(max-width: $screen-sm){
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+  }
+
+  &__column {
+    @include make-xs-column(24);
+    @include make-sm-column(12);
+    @include make-md-column(8);
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+
+    @media(max-width: $screen-sm){
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+    }
+  }
+
+  &__block {
+    border-bottom: 2px solid #ffde00;
+    padding-bottom: 8px;
+    margin-bottom: 38px;
+
+    @media(max-width: $screen-xs){
+      //margin-bottom: 50px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    border: 1px solid #d5d5d5;
+    margin-bottom: 16px;
+
+    img {
+      width: 100%;
+    }
   }
 
   &__date {
     font-size: 11px;
     margin-bottom: 12px;
     color: #818181;
+
+    @media(max-width: $screen-sm){
+      margin-bottom: 5px;
+    }
 
     &:hover, &:focus {
       color: #818181;
@@ -57,6 +116,52 @@
     &:hover, &:focus {
       color: #818181;
       text-decoration: underline;
+    }
+  }
+
+  &--main {
+    padding-top: 7px;
+
+    .news-item {
+      &__img {
+        height: 130px;
+        overflow: hidden;
+        position: relative;
+        background-color: #fff;
+
+        @media(max-width: $screen-sm){
+          height: 330px;
+        }
+        @media(max-width: 700px){
+          height: auto;
+        }
+
+        img {
+          position: absolute;
+          transform: translate(-50%, -50%);
+          top: 50%;
+          left: 50%;
+          //max-width: 90%;
+          //max-height: 90%;
+
+          @media(max-width: 700px){
+            position: relative;
+            transform: none;
+            top: auto;
+            left: auto;
+          }
+        }
+      }
+
+      &__title {
+        letter-spacing: 1px;
+        text-decoration: underline;
+        margin-bottom: 17px;
+      }
+
+      &__description {
+        line-height: 17px;
+      }
     }
   }
 }

@@ -1,16 +1,17 @@
 
 .head-h1 {
   font-family: $cuprum;
+  font-weight: bold;
   letter-spacing: 0.6px;
   font-size: 26px;
   margin-bottom: 20px;
 
   @media(max-width: $screen-md){
     font-size: 20px;
-    margin-bottom: 10px;
+    //margin-bottom: 10px;
   }
   @media(max-width: $screen-sm){
-    margin-bottom: 6px;
+    //margin-bottom: 6px;
   }
 }
 
@@ -33,6 +34,7 @@
 .head-h3 {
   font-family: $cuprum;
   font-size: 19px;
+  font-weight: bold;
   line-height: normal;
   margin-bottom: 20px;
 
@@ -45,12 +47,13 @@
 }
 
 .head-h4 {
-  font-size: 24px;
+  font-weight: bold;
+  font-size: 16px;
   line-height: normal;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
   @media(max-width: $screen-md){
-    margin-bottom: 10px;
+
   }
   @media(max-width: $screen-sm){
     //font-size: 16px;
@@ -104,9 +107,25 @@ a {
       text-decoration: underline;
     }
   }
+
+  &--nowrap {
+    white-space: nowrap;
+  }
+
+  &--mark {
+    color: #ff572a;
+  }
 }
 
 .promo-lines {
   font-size: 26px;
   color: #ffde00;
+
+  @media(max-width: $screen-sm){
+    font-size: 20px;
+  }
+
+  span {
+    color: black;
+  }
 }

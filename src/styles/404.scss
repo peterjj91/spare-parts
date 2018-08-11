@@ -1,0 +1,18 @@
+
+.error-page {
+  font-family: $cuprum;
+  padding-bottom: 50px;
+
+  @media(max-width: $screen-xs){
+    padding-bottom: 30px;
+  }
+
+  &__title {
+    font-size: 48px;
+    margin-bottom: 26px;
+
+    @media(max-width: $screen-xs){
+      font-size: 38px;
+    }
+  }
+}

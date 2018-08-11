@@ -4,7 +4,7 @@
 
 // Extra small screen / phone
 //** Deprecated `$screen-xs` as of v3.0.1
-$screen-xs:                  480px;
+$screen-xs:                  700px;
 //** Deprecated `$screen-xs-min` as of v3.2.0
 $screen-xs-min:              $screen-xs;
 //** Deprecated `$screen-phone` as of v3.0.1
@@ -12,7 +12,7 @@ $screen-phone:               $screen-xs-min;
 
 // Small screen / tablet
 //** Deprecated `$screen-sm` as of v3.0.1
-$screen-sm:                  1000px;
+$screen-sm:                  1050px;
 $screen-sm-min:              $screen-sm;
 //** Deprecated `$screen-tablet` as of v3.0.1
 $screen-tablet:              $screen-sm-min;
@@ -26,7 +26,7 @@ $screen-desktop:             $screen-md-min;
 
 // Large screen / wide desktop
 //** Deprecated `$screen-lg` as of v3.0.1
-$screen-lg:                  1300px;
+$screen-lg:                  1400px;
 $screen-lg-min:              $screen-lg;
 //** Deprecated `$screen-lg-desktop` as of v3.0.1
 $screen-lg-desktop:          $screen-lg-min;
@@ -57,10 +57,11 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
 // Small screen / tablet
 $container-tablet:             (100%);
 //** For `$screen-sm-min` and up.
-$container-sm:                 932px + $grid-gutter-width;
+$container-sm:                 $container-tablet;
 
 // Medium screen / desktop
-$container-desktop:            1010px + $grid-gutter-width;
+$container-desktop:            $container-tablet;
+//$container-desktop:            1010px + $grid-gutter-width;
 //** For `$screen-md-min` and up.
 $container-md:                 $container-desktop;
 
@@ -84,9 +85,11 @@ $icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/");
   }
 }
 
-
 .container {
   @include container-fixed;
+  max-width: $container-large-desktop;
+  width: 100%;
+  margin: 0 auto;
 
   @media (min-width: $screen-sm-min) {
     width: $container-sm;
@@ -98,8 +101,6 @@ $icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/");
     width: $container-lg;
   }
 }
-
-
 
 $cuprum: 'Cuprum', sans-serif;
 $roboto: 'Roboto', sans-serif;

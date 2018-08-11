@@ -5,12 +5,14 @@
   padding-bottom: 51px;
   position: relative;
 
-
   @media (max-width: $screen-md) {
 
   }
   @media (max-width: $screen-sm) {
-
+    margin-top: 0px;
+    padding-top: 10px;
+    background-color: #fec21e;
+    padding-bottom: 15px;
   }
 
   &__img {
@@ -25,6 +27,18 @@
     background-image: url("../img/footer-background.png");
     background-size: cover;
     background-position: center;
+
+    @media (max-width: $screen-sm) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    img {
+      @media (max-width: $screen-sm) {
+        height: 50px;
+      }
+    }
   }
 
   &__container {
@@ -36,6 +50,14 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 0px 135px 0px 70px;
+
+    @media (max-width: $screen-sm) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    @media(max-width: $screen-xs){
+      display: inline-block;
+    }
 
     &__block {
       padding-top: 7px;
@@ -50,6 +72,10 @@
     margin-bottom: 0;
     list-style: none;
     font-size: 17px;
+
+    @media (max-width: $screen-sm) {
+      display: none;
+    }
 
     li {
       margin-bottom: 4px;
@@ -77,6 +103,10 @@
     font-family: $cuprum;
     font-weight: bold;
 
+    @media (max-width: $screen-sm) {
+      font-size: 13px;
+    }
+
     li {
       margin-bottom: 9px;
 
@@ -93,6 +123,10 @@
 
   &__made {
     padding-top: 11px;
+
+    @media (max-width: $screen-sm) {
+
+    }
 
     a {
       text-decoration: underline;

@@ -1,35 +1,37 @@
 
-$width-default: 220px;
+$width-default: 140px;
 
 .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
-  //width: auto;
+  width: 140px;
 }
 
 .bootstrap-select {
   //width: auto;
-  border-radius: 100px;
+  border-radius: 0px;
   border: none;
-  box-shadow: 0px 0px 0px 1px #787886;
+  box-shadow: none;
   //border: 1px solid #787886;
 
   .dropdown-toggle {
-    padding: 10px 55px 8px 28px;
-    border-radius: 100px;
-    border: none !important;
-    font-size: 13px;
-    color: #787886 !important;
+    padding: 1px 20px 1px 5px;
+    border-radius: 0px;
+    border: 1px solid #ff621e;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: black !important;
     text-align: left;
 
     &:after {
-      content: '';
-      position: absolute;
-      opacity: 0;
-      bottom: 0;
-      left: 0%;
-      margin: 0px 12px;
-      width: 90%;
-      height: 1px;
-      background-color: rgba(0, 0, 0, 0.1);
+      //content: '';
+      //position: absolute;
+      //opacity: 0;
+      //bottom: 0;
+      //left: 0%;
+      //margin: 0px 12px;
+      //width: 90%;
+      //height: 1px;
+      //background-color: rgba(0, 0, 0, 0.1);
     }
 
     &:hover {
@@ -46,9 +48,13 @@ $width-default: 220px;
       position: absolute;
       transform: translate(0%, -50%);
       top: 50%;
-      right: 21px;
+      width: 12px;
+      height: 9px;
+      right: 6px;
       border: none;
       margin-top: 1px;
+      background: url("../img/down.png");
+
     }
 
     .filter-option {
@@ -66,25 +72,22 @@ $width-default: 220px;
   }
 
   .dropdown-menu {
-    margin-top: 0;
+    margin-top: -1px;
     padding: 0;
-    //box-shadow: none;
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
-    border: none;
+    border: 1px solid #adadad;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 7px;
     max-height: none !important;
     width: 100%;
     border-radius: 0px;
-    border-bottom-left-radius: 17px;
-    border-bottom-right-radius: 17px;
 
     @media(max-width: $screen-xs){
       max-width: 100%;
     }
 
     li {
-      padding-left: 20px;
+      padding-left: 0px;
       margin-bottom: 5px;
 
       &:last-child {
@@ -93,21 +96,22 @@ $width-default: 220px;
 
       a {
         display: inline-block;
+        width: 100%;
         vertical-align: top;
         position: relative;
         white-space: normal;
         outline: none;
-        font-size: 13px;
-        padding: 0px 10px 0px 10px;
+        font-size: 10px;
+        padding: 0px 5px 0px 5px;
         transition: none;
         background-color: transparent;
         color: #3c4454;
         border-radius: 10px;
 
         &:hover {
-          opacity: 1;
-          background-color: #5897fb;
-          color: #3c4454;
+          opacity: 0.5;
+          //background-color: #5897fb;
+          //color: #3c4454;
         }
 
         .check-mark {
@@ -119,11 +123,22 @@ $width-default: 220px;
         margin-right: 0 !important;
       }
 
+      &.active {
+
+        a {
+          &:hover, &:focus {
+            opacity: 0.5;
+            color: black;
+            background-color: transparent;
+          }
+        }
+      }
+
       &.selected {
         a {
-          background-color: #256386 !important;
-          color: white;
-          padding-right: 30px;
+          //background-color: #256386 !important;
+          //color: white;
+          //padding-right: 30px;
         }
       }
     }
@@ -206,7 +221,7 @@ $width-default: 220px;
     .dropdown-toggle {
       background-color: white !important;
       box-shadow: none;
-      color: $color-main !important;
+      color: #000 !important;
       border-bottom-left-radius: 0px;
       border-bottom-right-radius: 0px;
 

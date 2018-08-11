@@ -32,27 +32,63 @@
   }
 
   &__tube {
-    @include sprite($gear-1);
+    display: inline-block;
+    width: 78px;
+    height: 59px;
+    background: url(../img/gear-1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   &__loaders {
-    @include sprite($gear-2);
+    display: inline-block;
+    width: 77px;
+    height: 56px;
+    background: url(../img/gear-2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   &__front-loaders {
-    @include sprite($gear-3);
+    display: inline-block;
+    background: url(../img/gear-3.png);
+    width: 63px;
+    height: 64px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   &__gearbox {
-    @include sprite($gear-4);
+    display: inline-block;
+    width: 43px;
+    height: 63px;
+    background: url(../img/gear-4.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   &__motor {
-    @include sprite($gear-5);
+    display: inline-block;
+    width: 46px;
+    height: 58px;
+    background: url(../img/gear-5.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   &__oil {
-    @include sprite($gear-6);
+    display: inline-block;
+    width: 42px;
+    height: 53px;
+    background: url(../img/gear-6.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   &__basket {

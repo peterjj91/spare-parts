@@ -1,8 +1,10 @@
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap";
 @import "../../bower_components/bootstrap-select/sass/bootstrap-select";
 @import "../../bower_components/slick-carousel/slick/slick.scss";
+@import "sidr";
 @import "ion.rangeSlider";
 @import "fancybox";
+@import "stacktable";
 
 @import "mixins";
 @import "grids";
@@ -21,8 +23,13 @@
 @import "footer";
 
 @import "article-main";
+@import "article";
 @import "tab";
+@import "contact";
+@import "count";
+@import "login";
 @import "stock";
+@import "404";
 @import "search";
 @import "content";
 @import "catalog";

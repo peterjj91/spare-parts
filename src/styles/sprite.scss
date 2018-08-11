@@ -9,28 +9,39 @@
 //
 // At the bottom of this section, we provide information about the spritesheet itself
 // $spritesheet: width height image $spritesheet-sprites;
+$basket-black-name: 'basket-black';
+$basket-black-x: 140px;
+$basket-black-y: 64px;
+$basket-black-offset-x: -140px;
+$basket-black-offset-y: -64px;
+$basket-black-width: 16px;
+$basket-black-height: 13px;
+$basket-black-total-width: 211px;
+$basket-black-total-height: 128px;
+$basket-black-image: '../img/sprite.png';
+$basket-black: (140px, 64px, -140px, -64px, 16px, 13px, 211px, 128px, '../img/sprite.png', 'basket-black', );
 $basket-name: 'basket';
-$basket-x: 140px;
-$basket-y: 64px;
-$basket-offset-x: -140px;
-$basket-offset-y: -64px;
+$basket-x: 116px;
+$basket-y: 88px;
+$basket-offset-x: -116px;
+$basket-offset-y: -88px;
 $basket-width: 16px;
 $basket-height: 13px;
 $basket-total-width: 211px;
 $basket-total-height: 128px;
 $basket-image: '../img/sprite.png';
-$basket: (140px, 64px, -140px, -64px, 16px, 13px, 211px, 128px, '../img/sprite.png', 'basket', );
+$basket: (116px, 88px, -116px, -88px, 16px, 13px, 211px, 128px, '../img/sprite.png', 'basket', );
 $check-name: 'check';
-$check-x: 116px;
+$check-x: 137px;
 $check-y: 88px;
-$check-offset-x: -116px;
+$check-offset-x: -137px;
 $check-offset-y: -88px;
 $check-width: 15px;
 $check-height: 12px;
 $check-total-width: 211px;
 $check-total-height: 128px;
 $check-image: '../img/sprite.png';
-$check: (116px, 88px, -116px, -88px, 15px, 12px, 211px, 128px, '../img/sprite.png', 'check', );
+$check: (137px, 88px, -137px, -88px, 15px, 12px, 211px, 128px, '../img/sprite.png', 'check', );
 $gear-1-name: 'gear-1';
 $gear-1-x: 0px;
 $gear-1-y: 0px;
@@ -111,7 +122,7 @@ $search: (116px, 64px, -116px, -64px, 19px, 19px, 211px, 128px, '../img/sprite.p
 $spritesheet-width: 211px;
 $spritesheet-height: 128px;
 $spritesheet-image: '../img/sprite.png';
-$spritesheet-sprites: ($basket, $check, $gear-1, $gear-2, $gear-3, $gear-4, $gear-5, $gear-6, $search, );
+$spritesheet-sprites: ($basket-black, $basket, $check, $gear-1, $gear-2, $gear-3, $gear-4, $gear-5, $gear-6, $search, );
 $spritesheet: (211px, 128px, '../img/sprite.png', $spritesheet-sprites, );
 
 // The provided mixins are intended to be used with the array-like variables

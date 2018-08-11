@@ -3,15 +3,15 @@
   display: inline-block;
   vertical-align: top;
   width: 24px;
-  height: 18px;
+  height: 20px;
   z-index: 2;
   cursor: pointer;
   font-size: 20px;
   position: relative;
 
   @media(max-width: $screen-md){
-    width: 14px;
-    height: 10px;
+    //width: 14px;
+    //height: 10px;
   }
 
   &__wrapper {
@@ -32,14 +32,14 @@
 
   & > span {
     position: absolute;
-    background-color: black;
-    height: 1px;
+    background-color: #ffc600;
+    height: 2px;
     display: block;
     left: 0px;
     width: 24px;
 
     @media(max-width: $screen-md){
-      width: 14px;
+      //width: 14px;
     }
 
     &:nth-child(1){
@@ -47,18 +47,18 @@
     }
 
     &:nth-child(2){
-      top: 6px;
+      top: 9px;
 
       @media(max-width: $screen-md){
-        top: 3px;
+        //top: 3px;
       }
     }
 
     &:nth-child(3){
-      top: 11px;
+      top: 18px;
 
       @media(max-width: $screen-md){
-        top: 6px;
+        //top: 6px;
       }
     }
 
@@ -73,16 +73,20 @@
 
   &.active {
     span {
-      background-color: transparent;
+      //background-color: transparent;
 
-      &:before {
+      &:nth-child(1) {
         transform: rotate(-45deg);
         top: 10px;
       }
 
-      &:after {
+      &:nth-child(2) {
         transform: rotate(45deg);
         top: 10px;
+      }
+
+      &:nth-child(3) {
+        display: none;
       }
 
       &:before, &:after {

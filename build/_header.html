@@ -6,13 +6,17 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css?3">
 </head>
-<body>
-<main id="panel-body">
+<body >
+<main id="main" class="page-wrap">
     <div class="header">
         <div class="header__container">
             <div class="header__top">
+                <div class="header__burger" id="right-menu">
+                    <span class="toggle-menu mobile-menu"><span></span><span></span><span></span></span>
+                </div>
+
                 <div class="header__logo">
                     <a href="#" class="header__logo__img"><img src="img/logo.png" alt=""></a>
 
@@ -20,6 +24,10 @@
                 </div>
 
                 <div class="header__info">
+                    <div class="header__tel header__tel--mobile">
+                        <a href="#" class="glyphicon glyphicon-earphone"></a>
+                    </div>
+
                     <ul class="header__tel">
                         <li>
                             <a href="tel:88007753827">8 (800) 775-38-27</a>
@@ -29,19 +37,22 @@
                         </li>
                     </ul>
 
+                    <a href="#" class="header__cabinet">Личный кабинет</a>
+
                     <div class="header__basket">
                         <div class="basket-mini">
-                            <span class="basket-mini__icon">
-                                <span class="icon icon__basket"></span>
-                            </span>
+                            <a href="#" class="basket-mini__icon">
+                                <!--<span class="icon icon__basket"></span>-->
+                                <span class="icon glyphicon glyphicon-shopping-cart"></span>
+                            </a>
+
                             <input type="text" class="basket-mini__input" placeholder="" value="2500">
+
                             <span class="basket-mini__currency">
                                 <span class="rouble"></span>
                             </span>
                         </div>
                     </div>
-
-                    <a href="#" class="header__cabinet">Личный кабинет</a>
                 </div>
             </div>
 
@@ -65,80 +76,131 @@
                     </button>
                 </div>
             </div>
-            
+
             <ul class="header__catalog">
-                <li>
-                    <div class="header__catalog__icon">
-                        <div class="header__catalog__icon__wrapper">
-                            <div class="icon icon__tube"></div>
+                <li id="header__catalog__engine">
+                    <div class="header__catalog__description__wrapper">
+                        <div class="header__catalog__icon">
+                            <div class="header__catalog__icon__wrapper">
+                                <div class="icon icon__tube"></div>
+                                <div class="icon glyphicon glyphicon-remove header__catalog__close"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="header__catalog__description">
-                        <div class="header__catalog__description__text">
-                            <div class="header__catalog__text header__catalog__text--mini">Запчасти для</div>
-                            <div class="header__catalog__text">ДИЗЕЛЬНЫХ И ГАЗОВЫХ ДВИГАТЕЛЕЙ</div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="header__catalog__icon">
-                        <div class="header__catalog__icon__wrapper">
-                            <div class="icon icon__loaders"></div>
-                        </div>
-                    </div>
-                    <div class="header__catalog__description">
-                        <div class="header__catalog__description__text">
-                            <div class="header__catalog__text header__catalog__text--mini">Запчасти для</div>
-                            <div class="header__catalog__text">ФРОНТАЛЬНЫХ ПОГРУЗЧИКОВ SDLG</div>
+
+                        <div class="header__catalog__description">
+                            <div class="header__catalog__description__text">
+                                <div class="header__catalog__text header__catalog__text--mini">Двигатели</div>
+                                <div class="header__catalog__text">ДИЗЕЛЬНЫХ И ГАЗОВЫХ ДВИГАТЕЛЕЙ</div>
+                            </div>
+
+                            <div class="header__catalog__close__text">
+                                <div class="header__catalog__text">Cвернуть</div>
+                            </div>
                         </div>
                     </div>
                 </li>
-                <li>
-                    <div class="header__catalog__icon">
-                        <div class="header__catalog__icon__wrapper">
-                            <div class="icon icon__front-loaders"></div>
+                <li id="header__catalog__loadres">
+                    <div class="header__catalog__description__wrapper">
+                        <div class="header__catalog__icon">
+                            <div class="header__catalog__icon__wrapper">
+                                <div class="icon icon__loaders"></div>
+                                <div class="icon glyphicon glyphicon-remove header__catalog__close"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="header__catalog__description">
-                        <div class="header__catalog__description__text">
-                            <div class="header__catalog__text">ШАРНИРЫ СОЕДИНЕНИЯ ФРОНТАЛЬНЫХ ПОГРУЗЧИКОВ SDLG</div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="header__catalog__icon">
-                        <div class="header__catalog__icon__wrapper">
-                            <div class="icon icon__gearbox"></div>
-                        </div>
-                    </div>
-                    <div class="header__catalog__description">
-                        <div class="header__catalog__description__text">
-                            <div class="header__catalog__text header__catalog__text--mini">Запчасти для</div>
-                            <div class="header__catalog__text">ГИДРОМЕХАНИЧЕСКИХ КОРОБОК ПЕРЕДАЧ</div>
+
+                        <div class="header__catalog__description">
+                            <div class="header__catalog__description__text">
+                                <div class="header__catalog__text header__catalog__text--mini">Фронтальные погрузчики</div>
+                                <div class="header__catalog__text">ФРОНТАЛЬНЫХ ПОГРУЗЧИКОВ SDLG</div>
+                            </div>
+
+                            <div class="header__catalog__close__text">
+                                <div class="header__catalog__text">Cвернуть</div>
+                            </div>
                         </div>
                     </div>
                 </li>
-                <li>
-                    <div class="header__catalog__icon">
-                        <div class="header__catalog__icon__wrapper">
-                            <div class="icon icon__motor"></div>
+                <li id="header__catalog__gearbox">
+                    <div class="header__catalog__description__wrapper">
+                        <div class="header__catalog__icon">
+                            <div class="header__catalog__icon__wrapper">
+                                <div class="icon icon__front-loaders"></div>
+                                <div class="icon glyphicon glyphicon-remove header__catalog__close"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="header__catalog__description">
-                        <div class="header__catalog__description__text">
-                            <div class="header__catalog__text">ФИЛЬТРЫ ДЛЯ ФРОНТАЛЬНЫХ ПОГРУЗЧИКОВ SDLG, ГАЗОВЫХ И ДИЗЕЛЬНЫХ ДВИГАТЕЛЕЙ</div>
+                        <div class="header__catalog__description">
+                            <div class="header__catalog__description__text">
+                                <div class="header__catalog__text header__catalog__text--mini">Коробки передач</div>
+                                <div class="header__catalog__text">ШАРНИРЫ СОЕДИНЕНИЯ ФРОНТАЛЬНЫХ ПОГРУЗЧИКОВ SDLG</div>
+                            </div>
+
+                            <div class="header__catalog__close__text">
+                                <div class="header__catalog__text">Cвернуть</div>
+                            </div>
                         </div>
                     </div>
                 </li>
-                <li>
-                    <div class="header__catalog__icon">
-                        <div class="header__catalog__icon__wrapper">
-                            <div class="icon icon__oil"></div>
+                <li id="header__catalog__connection">
+                    <div class="header__catalog__description__wrapper">
+                        <div class="header__catalog__icon">
+                            <div class="header__catalog__icon__wrapper">
+                                <div class="icon icon__gearbox"></div>
+
+                                <div class="icon glyphicon glyphicon-remove header__catalog__close"></div>
+                            </div>
+                        </div>
+                        <div class="header__catalog__description">
+                            <div class="header__catalog__description__text">
+                                <div class="header__catalog__text header__catalog__text--mini">Шарниры сочленения</div>
+                                <div class="header__catalog__text">ГИДРОМЕХАНИЧЕСКИХ КОРОБОК ПЕРЕДАЧ</div>
+                            </div>
+
+                            <div class="header__catalog__close__text">
+                                <div class="header__catalog__text">Cвернуть</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="header__catalog__description">
-                        <div class="header__catalog__description__text">
-                            <div class="header__catalog__text">МАСЛА </div>
+                </li>
+                <li id="header__catalog__filter">
+                    <div class="header__catalog__description__wrapper">
+                        <div class="header__catalog__icon">
+                            <div class="header__catalog__icon__wrapper">
+                                <div class="icon icon__motor"></div>
+
+                                <div class="icon glyphicon glyphicon-remove header__catalog__close"></div>
+                            </div>
+                        </div>
+
+                        <div class="header__catalog__description">
+                            <div class="header__catalog__description__text">
+                                <div class="header__catalog__text header__catalog__text--mini">Фильтры</div>
+                                <div class="header__catalog__text">ФИЛЬТРЫ ДЛЯ ФРОНТАЛЬНЫХ ПОГРУЗЧИКОВ SDLG, ГАЗОВЫХ И ДИЗЕЛЬНЫХ ДВИГАТЕЛЕЙ</div>
+                            </div>
+
+                            <div class="header__catalog__close__text">
+                                <div class="header__catalog__text">Cвернуть</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li id="header__catalog__oil">
+                    <div class="header__catalog__description__wrapper">
+                        <div class="header__catalog__icon">
+                            <div class="header__catalog__icon__wrapper">
+                                <div class="icon icon__oil"></div>
+
+                                <div class="icon glyphicon glyphicon-remove header__catalog__close"></div>
+                            </div>
+                        </div>
+                        <div class="header__catalog__description">
+                            <div class="header__catalog__description__text">
+                                <div class="header__catalog__text header__catalog__text--mini">Масла, смазки, химия</div>
+                                <div class="header__catalog__text">МАСЛА </div>
+                            </div>
+
+                            <div class="header__catalog__close__text">
+                                <div class="header__catalog__text">Cвернуть</div>
+                            </div>
                         </div>
                     </div>
                 </li>

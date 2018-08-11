@@ -6,9 +6,19 @@
   padding: 29px 27px;
   background-color: #f9f9f9;
 
+  @media(max-width: $screen-xs){
+    padding: 20px 20px;
+  }
+
   &__img {
     float: left;
     width: 167px;
+
+    @media(max-width: $screen-xs){
+      padding-left: 0;
+      width: 100%;
+      margin-bottom: 20px;
+    }
 
     img {
       width: 100%;
@@ -18,8 +28,14 @@
   &__description {
     padding-left: 190px;
 
-    p {
+    @media(max-width: $screen-xs){
+      padding-left: 0;
+    }
 
+    p {
+      @media(max-width: $screen-xs){
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -31,12 +47,16 @@
     font-size: 18px;
     margin-top: -3px;
     line-height: 22px;
-    margin-bottom: 16px;
     color: #000;
+    margin-bottom: 0;
 
     &:hover, &:focus {
       color: #000;
       text-decoration: none;
+    }
+
+    & ~ * {
+      margin-top: 16px;
     }
   }
 
@@ -46,11 +66,56 @@
         width: 100%;
         max-width: 161px;
         margin-bottom: 17px;
+
+        @media(max-width: $screen-sm){
+          max-width: 100%;
+          margin-bottom: 20px;
+        }
       }
 
       &__description {
         padding-left: 0;
       }
+    }
+  }
+}
+
+.promo-img {
+  border: 1px solid #eeeeee;
+
+  img {
+    width: 100%;
+  }
+}
+
+.promo-description {
+  border-top: 2px solid #ffde00;
+  padding-top: 25px;
+
+  @media(max-width: $screen-sm){
+    padding-bottom: 15px;
+  }
+}
+
+.promo-call {
+  text-align: center;
+  padding-top: 30px;
+
+  @media(max-width: $screen-sm){
+    padding-bottom: 30px;
+  }
+
+  .head-h4 {
+    font-family: $cuprum;
+    font-size: 17px;
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    width: 100%;
+
+    @media(max-width: $screen-sm){
+      width: auto;
     }
   }
 }

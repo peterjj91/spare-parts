@@ -10,6 +10,12 @@
     padding: 0px 70px 0px 27px;
     font-size: 12px;
     border: none;
+
+    @media(max-width: $screen-sm){
+      height: 32px;
+      padding-left: 13px;
+      padding-right: 50px;
+    }
   }
 
   &__btn {
@@ -22,5 +28,9 @@
     width: 87px;
     border: none;
     padding: 0;
+
+    @media(max-width: $screen-sm){
+      width: 45px;
+    }
   }
 }
