@@ -1,15 +1,51 @@
-<div class="modal right fade" id="favourite-side1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal__close modal__close--main">
-        <button type="button" class="btn " data-dismiss="modal">
-            close
-        </button>
-    </div>
-
-    <div class="modal-dialog">
+<div class="modal right fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">Товар добавлен в корзину</div>
+            </div>
 
-            
+            <div class="modal-body">
+                <div class="modal__total">
+                    <button type="button" class="btn btn__promo btn__promo--simple" data-dismiss="modal">продолжить покупки</button>
+                    <a href="basket-user.html" class="btn btn__promo">ПЕРЕЙТИ в корзину</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
+<div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">Товар добавлен в корзину</div>
+            </div>
+
+            <div class="modal-body">
+                <form class="login__form">
+                    <div class="form-group ">
+                        <label for="order-name"><strong>Имя</strong></label>
+                        <input type="text" class="form-control input" id="order-name" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="order-tel"><strong>Телефон</strong></label>
+                        <input type="text" class="form-control input tel" id="order-tel">
+                    </div>
+
+                    <div class="form-group">
+                        <div class="checkbox-custom__block">
+                            <input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox" checked>
+                            <label for="checkbox-1" class="checkbox-custom-label">Согласие на обработку данных</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button class="btn btn__promo">ЗАКАЗАТЬ ЗВОНОК</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>

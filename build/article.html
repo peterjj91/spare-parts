@@ -24,9 +24,9 @@
                 </div>
 
                 <div class="header__info">
-                    <div class="header__tel header__tel--mobile">
-                        <a href="#" class="glyphicon glyphicon-earphone"></a>
-                    </div>
+                    <a href="#" data-toggle="modal" data-target="#myModal2" class="header__tel header__tel--mobile">
+                        <div class="icon icon__phone"></div>
+                    </a>
 
                     <ul class="header__tel">
                         <li>
@@ -40,10 +40,9 @@
                     <a href="#" class="header__cabinet">Личный кабинет</a>
 
                     <div class="header__basket">
-                        <div class="basket-mini">
+                        <div class="basket-mini active">
                             <a href="#" class="basket-mini__icon">
-                                <!--<span class="icon icon__basket"></span>-->
-                                <span class="icon glyphicon glyphicon-shopping-cart"></span>
+                                <span class="icon"></span>
                             </a>
 
                             <input type="text" class="basket-mini__input" placeholder="" value="2500">
@@ -113,7 +112,8 @@
                             <div class="header__catalog__description__text">
                                 <div class="header__catalog__text header__catalog__text--mini visible-sm visible-xs">Запчасти</div>
                                 <div class="header__catalog__text header__catalog__text--mini header__catalog__text--active hidden-xs hidden-sm">Запчасти для</div>
-                                <div class="header__catalog__text header__catalog__text--description">ФРОНТАЛЬНЫХ ПОГРУЗЧИКОВ SDLG</div>
+                                <div class="header__catalog__text header__catalog__text--description">ФРОНТАЛЬНЫХ ПОГРУЗЧИКОВ
+                                    <br>SDLG</div>
                             </div>
 
                             <div class="header__catalog__close__text">
@@ -133,7 +133,7 @@
                         <div class="header__catalog__description">
                             <div class="header__catalog__description__text">
                                 <div class="header__catalog__text header__catalog__text--mini visible-sm visible-xs">Шарины</div>
-                                <div class="header__catalog__text header__catalog__text--description">ШАРНИРЫ СОЕДИНЕНИЯ ФРОНТАЛЬНЫХ ПОГРУЗЧИКОВ SDLG</div>
+                                <div class="header__catalog__text header__catalog__text--description">ШАРНИРЫ СОЕДИНЕНИЯ ФРОНТАЛЬНЫХ ПОГРУЗЧИКОВ <br>SDLG</div>
                             </div>
 
                             <div class="header__catalog__close__text">
@@ -594,22 +594,59 @@
         </div>
     </main>
 
-    <div class="modal right fade" id="favourite-side1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal__close modal__close--main">
-            <button type="button" class="btn " data-dismiss="modal">
-                close
-            </button>
-        </div>
-    
-        <div class="modal-dialog">
+    <div class="modal right fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Товар добавлен в корзину</div>
+                </div>
     
-                
+                <div class="modal-body">
+                    <div class="modal__total">
+                        <button type="button" class="btn btn__promo btn__promo--simple" data-dismiss="modal">продолжить покупки</button>
+                        <a href="basket-user.html" class="btn btn__promo">ПЕРЕЙТИ в корзину</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
+    <div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Товар добавлен в корзину</div>
+                </div>
+    
+                <div class="modal-body">
+                    <form class="login__form">
+                        <div class="form-group ">
+                            <label for="order-name"><strong>Имя</strong></label>
+                            <input type="text" class="form-control input" id="order-name" placeholder="">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="order-tel"><strong>Телефон</strong></label>
+                            <input type="text" class="form-control input tel" id="order-tel">
+                        </div>
+    
+                        <div class="form-group">
+                            <div class="checkbox-custom__block">
+                                <input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox" checked>
+                                <label for="checkbox-1" class="checkbox-custom-label">Согласие на обработку данных</label>
+                            </div>
+                        </div>
+    
+                        <div class="form-group">
+                            <button class="btn btn__promo">ЗАКАЗАТЬ ЗВОНОК</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 
     <script src="js/main.js?3"></script>
+
 </body>
 </html>

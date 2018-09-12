@@ -1,5 +1,5 @@
 .modal-backdrop {
-  background: rgba(67, 87, 121, 0.6);
+  background: rgba(255, 255, 255, 0.8);
 
   &.in {
     opacity: 1;
@@ -7,138 +7,70 @@
 }
 
 .modal {
-  opacity: 1;
+  &-header {
+    padding: 15px 40px 8px 40px;
+    border-bottom: 2px solid #febd20;
+    text-align: center;
+    font-family: $cuprum;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 0px;
+
+    @media(max-width: $screen-xs){
+      font-size: 17px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
 
   &-content {
-    height: 100%;
+    border: none;
+    border-radius: 0px;
+    background-color: rgba(255, 255, 255, 0.96);
+    box-shadow: 0px 5px 27px rgba(0, 0, 0, 0.26);
   }
 
-  &.fade {
-    .modal-dialog {
-      transform: translate(0%, 0%);
-    }
-  }
-
-  &.in {
-    .modal-dialog {
-      transition: all 0.2s;
-      right: 0;
-    }
-
-    .modal__close--main {
-      right: 910px;
+  &-dialog {
+    @media(min-width: 768px){
+      width: 580px;
+      margin: 30px auto;
     }
   }
 
-  &__close {
-    display: none;
-    float: right;
-    line-height: normal;
+  &-body {
+    padding: 46px 42px 49px 42px;
 
-    @media(max-width: $screen-md){
-      display: inline-block;
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      z-index: 2;
+    @media(max-width: $screen-xs){
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
     }
+  }
 
-    @media(max-width: $screen-sm){
+  &__total {
+    display: flex;
+    justify-content: space-between;
 
+    @media(max-width: $screen-xs){
+      display: block;
+      text-align: center;
     }
 
     .btn {
-      padding: 0;
-      fill: #256386;
-      background-color: transparent;
-      min-width: auto !important;
-    }
+      letter-spacing: -0.6px;
+      width: 228px;
 
-    svg {
-      width: 35px;
-      height: 35px;
+      @media(max-width: $screen-xs){
+        width: 100%;
+        margin-bottom: 20px;
+      }
 
-      @media(max-width: $screen-md){
-        width: 32px;
-        height: 32px;
+      &:last-child {
+        @media(max-width: $screen-xs){
+          margin-bottom: 0;
+        }
       }
     }
-  }
-}
-
-.modal-dialog {
-  position: fixed;
-  top: 0;
-  height: 100%;
-  width: 895px;
-  right: -100%;
-  background-color: #fafbf5;
-  padding: 97px 177px 90px 82px;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  z-index: 4;
-  margin: 0;
-
-  @media(max-width: $screen-md){
-    padding: 20px;
-    width: 300px;
-  }
-
-  @media(max-width: 768px){
-    margin: 0px auto;
-  }
-  @media(max-width: $screen-sm){
-    margin: 0;
-  }
-}
-
-.modal-content {
-  border: none;
-  border-radius: 0px;
-  box-shadow: none;
-  background-color: transparent;
-}
-
-.modal.right.fade .modal-dialog {
-  right: -895px;
-  transition: opacity 0.2s linear, right 0.2s ease-out;
-}
-
-.modal.right.fade.in .modal-dialog {
-  right: 0;
-}
-
-.fancybox-container {
-  img {
-    //position: relative;
-    //transform: none;
-    //top: auto;
-    //left: auto;
-    //width: auto;
-  }
-}
-
-.fancybox-navigation .fancybox-button--arrow_left {
-  @media(max-width: $screen-md) {
-    left: 15%;
-  }
-  @media(max-width: $screen-sm) {
-    left: 10%;
-  }
-  @media(max-width: $screen-xs) {
-    left: 5%;
-  }
-}
-
-.fancybox-navigation .fancybox-button--arrow_right {
-  @media(max-width: $screen-md) {
-    right: 15%;
-  }
-  @media(max-width: $screen-sm) {
-    right: 10%;
-  }
-  @media(max-width: $screen-xs) {
-    right: 5%;
   }
 }

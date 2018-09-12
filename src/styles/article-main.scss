@@ -1,6 +1,6 @@
 
 .article-main {
-  display: flex;
+  //display: flex;
   @include make-row;
   margin-left: -50px;
 
@@ -15,15 +15,16 @@
 
   &__side {
     @include make-xs-column(24);
-    @include make-md-column(5.9);
+    @include make-sm-column(5.9);
     padding: 0 !important;
     padding-bottom: 186px !important;
-    flex: 323px;
+    //flex: 323px;
     background-color: #fcfcfc;
 
     @media(max-width: $screen-sm){
+      @include make-xs-column(24);
       flex: none;
-      float: none !important;
+      //float: none !important;
       padding-bottom: 5px !important;
     }
 
@@ -57,11 +58,12 @@
   }
 
   &__content {
-    flex: auto;
+    //flex: auto;
+    @include make-xs-column(24);
     @include make-sm-column(18);
     @include make-lg-column-push(0.66);
     padding-left: 6px;
-    padding-right: 40px;
+    //padding-right: 40px;
     padding-bottom: 186px;
     padding-top: 46px;
 
@@ -69,10 +71,15 @@
       padding-left: 50px;
     }
     @media(max-width: $screen-md){
-      padding-right: 10px;
+      padding-left: 50px;
     }
     @media(max-width: $screen-sm){
-      padding: 20px 10px 0px 10px;
+      @include make-xs-column(24);
+      padding: 20px 30px 0px 30px;
+    }
+    @media(max-width: $screen-xs){
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
 
@@ -81,6 +88,8 @@
     margin-bottom: 40px;
 
     @media(max-width: $screen-sm){
+      margin-left: 0;
+      margin-right: 0;
       margin-bottom: 50px;
     }
 
@@ -106,7 +115,7 @@
 
     &__side {
       @include make-xs-column-offset(0.5);
-      @include make-xs-column(7.2);
+      @include make-xs-column(7.7);
 
       @media(max-width: $screen-sm){
         margin-top: 0;

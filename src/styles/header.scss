@@ -12,7 +12,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition: all 0.15s ease-out 0s;
+  //transition: all 0.15s ease-out 0s;
 
   @media(max-width: $screen-md){
 
@@ -68,6 +68,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding: 0px 23px 0px 70px;
     margin-bottom: 62px;
     position: relative;
@@ -277,6 +278,10 @@
     flex-direction: row;
     justify-content: space-between;
 
+    @media(max-width: $screen-md){
+      margin-left: 0;
+      margin-right: 0;
+    }
     @media(max-width: $screen-sm){
       display: block;
       font-size: 0;
@@ -292,11 +297,13 @@
       padding-right: 12px;
 
       @media(max-width: $screen-md){
-        padding-left: 0;
-        padding-right: 0;
+        //padding-left: 0;
+        //padding-right: 0;
       }
       @media(max-width: $screen-sm){
         @include make-xs-column(8);
+        padding-left: 0;
+        padding-right: 0;
         max-width: none;
         display: inline-block;
         vertical-align: top;
@@ -426,7 +433,7 @@
 
         @media(max-width: $screen-sm){
           font-size: 11px;
-          display: block;
+          display: block !important;
           //margin-bottom: 0;
         }
       }
@@ -442,7 +449,7 @@
       }
 
       &--description {
-        margin-top: 27px;
+        margin-top: 10px;
       }
     }
   }
@@ -592,7 +599,7 @@
       color: #000;
 
       .icon {
-        //@include sprite($basket-black);
+        @include sprite($basket-black);
         color: #000;
       }
 

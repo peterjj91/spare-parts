@@ -13,6 +13,30 @@ $(document).ready(function(){
     });
 });
 
+// $(document).ready(function(){
+//     $('.phone_ru').mask('+7(000) 000-0000');
+// });
+
+$(document).ready(function(){
+    $('.tel').inputmask({"mask": "+7(999) 999-9999"});
+
+    //email mask
+    $(".email").inputmask({
+        mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
+        greedy: false,
+        onBeforePaste: function (pastedValue, opts) {
+            pastedValue = pastedValue.toLowerCase();
+            return pastedValue.replace("mailto:", "");
+        },
+        definitions: {
+            '*': {
+                validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
+                casing: "lower"
+            }
+        }
+    });
+});
+
 // slick
 $(document).ready(function() {
     $('.promo-slider').slick({
@@ -267,9 +291,16 @@ $("#header__catalog__oil").on("click", function() {
     $("#side-oil").toggleClass('active').siblings("active").removeClass("active");
 });
 
-// header__catalog__engine
-// header__catalog__loadres
-// header__catalog__gearbox
-// header__catalog__connection
-// header__catalog__filter
-// header__catalog__oil
+$(function(){
+    $('.collaps-me').click(function(){
+        $(this).next().trigger('click');
+    })
+});
+
+$('.panel-collapse').on('shown.bs.collapse', function () {
+    $(this).parent().addClass('active');
+});
+
+$('.panel-collapse').on('hidden.bs.collapse', function () {
+    $(this).parent().removeClass('active');
+});

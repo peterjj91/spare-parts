@@ -41,6 +41,14 @@
     background-position: center;
   }
 
+  &__cart {
+    @include sprite($cart);
+  }
+
+  &__phone {
+    @include sprite($phone);
+  }
+
   &__loaders {
     display: inline-block;
     width: 77px;

@@ -24,9 +24,9 @@
                 </div>
 
                 <div class="header__info">
-                    <div class="header__tel header__tel--mobile">
-                        <a href="#" class="glyphicon glyphicon-earphone"></a>
-                    </div>
+                    <a href="#" data-toggle="modal" data-target="#myModal2" class="header__tel header__tel--mobile">
+                        <div class="icon icon__phone"></div>
+                    </a>
 
                     <ul class="header__tel">
                         <li>
@@ -40,10 +40,9 @@
                     <a href="#" class="header__cabinet">Личный кабинет</a>
 
                     <div class="header__basket">
-                        <div class="basket-mini">
+                        <div class="basket-mini active">
                             <a href="#" class="basket-mini__icon">
-                                <!--<span class="icon icon__basket"></span>-->
-                                <span class="icon glyphicon glyphicon-shopping-cart"></span>
+                                <span class="icon"></span>
                             </a>
 
                             <input type="text" class="basket-mini__input" placeholder="" value="2500">
@@ -113,7 +112,8 @@
                             <div class="header__catalog__description__text">
                                 <div class="header__catalog__text header__catalog__text--mini visible-sm visible-xs">Запчасти</div>
                                 <div class="header__catalog__text header__catalog__text--mini header__catalog__text--active hidden-xs hidden-sm">Запчасти для</div>
-                                <div class="header__catalog__text header__catalog__text--description">ФРОНТАЛЬНЫХ ПОГРУЗЧИКОВ SDLG</div>
+                                <div class="header__catalog__text header__catalog__text--description">ФРОНТАЛЬНЫХ ПОГРУЗЧИКОВ
+                                    <br>SDLG</div>
                             </div>
 
                             <div class="header__catalog__close__text">
@@ -133,7 +133,7 @@
                         <div class="header__catalog__description">
                             <div class="header__catalog__description__text">
                                 <div class="header__catalog__text header__catalog__text--mini visible-sm visible-xs">Шарины</div>
-                                <div class="header__catalog__text header__catalog__text--description">ШАРНИРЫ СОЕДИНЕНИЯ ФРОНТАЛЬНЫХ ПОГРУЗЧИКОВ SDLG</div>
+                                <div class="header__catalog__text header__catalog__text--description">ШАРНИРЫ СОЕДИНЕНИЯ ФРОНТАЛЬНЫХ ПОГРУЗЧИКОВ <br>SDLG</div>
                             </div>
 
                             <div class="header__catalog__close__text">
@@ -488,156 +488,179 @@
                 <div class="basket-promo">
                     <div class="basket-promo__ordering">
                         <div class="basket-promo__ordering__content">
-                            <div class="basket-promo__ordering__block">
-                                <div class="basket-promo__ordering__nav">
-                                    <div class="basket-promo__ordering__nav__title">
-                                        <div class="head-h4">1. Товары в заказе</div>
-                                    </div>
+                            <div class="panel-group basket-promo__group" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="panel basket-promo__panel panel-default">
+                                    <div class="panel-heading basket-promo__heading" id="headingOne" role="tab">
+                                        <div class="basket-promo__ordering__nav">
+                                            <div class="basket-promo__ordering__nav__title">
+                                                <div class="head-h4">1. Товары в заказе</div>
+                                            </div>
 
-                                    <a href="#" class="basket-promo__ordering__nav__edit">
-                                        Изменить
-                                    </a>
-                                </div>
-
-                                <table class="catalog__table stacktable catalog__table--ordering">
-                                    <thead class="hidden">
-                                    <tr>
-                                        <td>Артикул</td>
-                                        <td>Наименование</td>
-                                        <td>Количество</td>
-                                        <td>Действие</td>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            <a href="#"><img src="img/basket-img1.jpg" class="catalog__table__img" alt=""></a>
-                                        </td>
-                                        <td>
-                                            <a href="#" class="title">Адаптер насоса подкачки топлива</a>
-                                        </td>
-                                        <td>
-                                            <p class="light">C123789456</p>
-                                        </td>
-                                        <td>
-                                            <a href="#" class="title">1 шт.</a>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-
-                                <div class="basket-promo__ordering__next">
-                                    <button class="btn btn__promo">Далее</button>
-                                </div>
-                            </div>
-
-                            <div class="basket-promo__ordering__block">
-                                <div class="basket-promo__ordering__nav">
-                                    <div class="basket-promo__ordering__nav__title">
-                                        <div class="head-h4">2. Регион доставки</div>
-                                    </div>
-
-                                    <a href="#" class="basket-promo__ordering__nav__edit">
-                                        Изменить
-                                    </a>
-                                </div>
-
-                                <ul class="basket-promo__ordering__choose">
-                                    <li>
-                                        <div class="radio-custom__block">
-                                            <input id="radio-3" class="radio-custom" name="radio-group" type="radio" checked="checked">
-                                            <label for="radio-3" class="radio-custom-label">Юридическое лицо</label>
+                                            <a class="basket-promo__ordering__nav__edit" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Изменить</a>
                                         </div>
-                                    </li>
-                                    <li>
-                                        <div class="radio-custom__block">
-                                            <input id="radio-4" class="radio-custom" name="radio-group" type="radio">
-                                            <label for="radio-4" class="radio-custom-label">Физическое лицо</label>
+                                    </div>
+
+                                    <div class="basket-promo__panel-collapse panel-collapse collapse in" id="collapseOne" role="tabpanel" aria-labelledby="headingOne">
+                                        <div class="panel-body basket-promo__panel-body">
+                                            <table class="catalog__table stacktable catalog__table--ordering">
+                                                <tr class="hidden">
+                                                    <td class="catalog__table__head">Фото</td>
+                                                    <td class="catalog__table__head">Наименование</td>
+                                                    <td class="catalog__table__head">Место сочленения</td>
+                                                    <td class="catalog__table__head">Количество</td>
+                                                    <td class="catalog__table__head">Цена за шт.</td>
+                                                </tr>
+                                                <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><img src="img/basket-img1.jpg" class="catalog__table__img" alt=""></a>
+                                                    </td>
+                                                    <td>
+                                                        <p class="light">C123789456</p>
+                                                        <a href="#" class="title">Адаптер насоса подкачки топлива</a>
+                                                    </td>
+                                                    <td>
+                                                        <p class="light">C123789456</p>
+                                                        <p class="light">C123789456</p>
+                                                        <p class="light">C123789456</p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class="title">1 шт.</a>
+                                                    </td>
+                                                    <td>
+                                                        2 500 <span class="rouble"></span>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <div class="basket-promo__ordering__next">
+                                                <a class="collapsed btn btn__promo" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Вперед</a>
+                                            </div>
                                         </div>
-                                    </li>
-                                </ul>
-
-                                <div class="basket-promo__ordering__location">
-                                    <p>Местоположение:</p>
-
-                                    <div class="basket-promo__ordering__location__city">Москва</div>
+                                    </div>
                                 </div>
 
-                                <div class="alert alert-danger" role="alert">
-                                    г. Нижний Новгород, Нижегородский р-н, Поволжье, Россия
+                                <div class="panel basket-promo__panel panel-default">
+                                    <div class="panel-heading basket-promo__heading" id="headingTwo" role="tab">
+                                        <div class="basket-promo__ordering__nav">
+                                            <div class="basket-promo__ordering__nav__title">
+                                                <div class="head-h4">2. Регион доставки</div>
+                                            </div>
+
+                                            <a class="basket-promo__ordering__nav__edit" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Изменить</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="basket-promo__panel-collapse panel-collapse collapse" id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo">
+                                        <div class="panel-body basket-promo__panel-body">
+                                            <ul class="basket-promo__ordering__choose">
+                                                <li>
+                                                    <div class="radio-custom__block">
+                                                        <input id="radio-3" class="radio-custom" name="radio-group" type="radio" checked="checked">
+                                                        <label for="radio-3" class="radio-custom-label">Юридическое лицо</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="radio-custom__block">
+                                                        <input id="radio-4" class="radio-custom" name="radio-group" type="radio">
+                                                        <label for="radio-4" class="radio-custom-label">Физическое лицо</label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                            <div class="basket-promo__ordering__location">
+                                                <p>Местоположение:</p>
+
+                                                <div class="basket-promo__ordering__location__city">Москва</div>
+                                            </div>
+
+                                            <div class="alert alert-danger" role="alert">
+                                                г. Нижний Новгород, Нижегородский р-н, Поволжье, Россия
+                                            </div>
+
+                                            <br>
+
+                                            <p>Индекс</p>
+
+                                            <br>
+
+                                            <div class="alert alert-danger" role="alert">
+                                                г. Нижний Новгород, Нижегородский р-н, Поволжье, Россия
+                                            </div>
+
+                                            <p>Выберите свой город в списке. Если вы не нашли свой город, выберите "другое местоположение", а город впишите в поле "Город</p>
+
+                                            <br>
+
+                                            <div class="basket-promo__ordering__next basket-promo__ordering__next--few">
+                                                <a class="btn btn__promo" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Назад</a>
+                                                <a class="btn btn__promo" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Далее</a>
+                                            </div>
+
+                                            <br>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <br>
+                                <div class="panel basket-promo__panel panel-default">
+                                    <div class="panel-heading basket-promo__heading" id="headingThree" role="tab">
+                                        <div class="basket-promo__ordering__nav">
+                                            <div class="basket-promo__ordering__nav__title">
+                                                <div class="head-h4">3. Получатель</div>
+                                            </div>
 
-                                <p>Индекс</p>
-
-                                <br>
-
-                                <div class="alert alert-danger" role="alert">
-                                    г. Нижний Новгород, Нижегородский р-н, Поволжье, Россия
-                                </div>
-
-                                <p>Выберите свой город в списке. Если вы не нашли свой город, выберите "другое местоположение", а город впишите в поле "Город</p>
-
-                                <br>
-
-                                <div class="basket-promo__ordering__next basket-promo__ordering__next--few">
-                                    <a href="#" class="btn btn__promo">Назад</a>
-                                    <a href="#" class="btn btn__promo">Далее</a>
-                                </div>
-
-                                <br>
-
-                                <!--<div class="checkbox-custom__block">-->
-                                    <!--<input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox" checked>-->
-                                    <!--<label for="checkbox-1" class="checkbox-custom-label">First Choice</label>-->
-                                <!--</div>-->
-                            </div>
-
-                            <div class="basket-promo__ordering__block">
-                                <div class="basket-promo__ordering__nav">
-                                    <div class="basket-promo__ordering__nav__title">
-                                        <div class="head-h4">3. Получатель</div>
+                                            <a class="basket-promo__ordering__nav__edit" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Изменить</a>
+                                        </div>
                                     </div>
 
-                                    <a href="#" class="basket-promo__ordering__nav__edit">
-                                        Изменить
-                                    </a>
-                                </div>
+                                    <div class="basket-promo__panel-collapse panel-collapse collapse" id="collapseThree" role="tabpanel" aria-labelledby="headingThree">
+                                        <div class="panel-body basket-promo__panel-body">
+                                            <form class="basket-promo__form">
+                                                <div class="form-group ">
+                                                    <label for="order-name">ФИО</label>
+                                                    <input type="text" class="form-control input" id="order-name" placeholder="">
+                                                </div>
 
-                                <form class="basket-promo__form">
-                                    <div class="form-group ">
-                                        <label for="order-name">ФИО</label>
-                                        <input type="text" class="form-control input" id="order-name" placeholder="">
+                                                <div class="form-group ">
+                                                    <label for="order-email">Email</label>
+                                                    <input type="text" class="form-control input email" id="order-email" placeholder="">
+                                                </div>
+
+                                                <div class="form-group ">
+                                                    <label for="order-tel">Телефон</label>
+                                                    <input type="text" class="form-control input tel" id="order-tel" placeholder="">
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="order-adress">Адрес доставки</label>
+                                                    <input type="text" class="form-control input" id="order-adress" placeholder="">
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="order-comment">Комментарии</label>
+                                                    <textarea class="form-control input" id="order-comment"></textarea>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="checkbox-custom__block">
+                                                        <input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox" checked>
+                                                        <label for="checkbox-1" class="checkbox-custom-label">Я даю согласие на обработку персональных данных</label>
+                                                    </div>
+                                                </div>
+                                            </form>
+
+                                            <div class="basket-promo__ordering__next">
+                                                <a href="#collapseTwo" class="btn btn__promo" role="button" data-toggle="collapse" data-parent="#accordion" >Назад</a>
+                                            </div>
+
+                                            <div class="basket-promo__ordering__total">
+                                                <div class="head-h5"><strong>Общая стоимость: 2500 руб.</strong></div>
+
+                                                <button class="btn btn__promo">ОФОРМИТЬ заказать</button>
+                                            </div>
+                                        </div>
                                     </div>
-
-                                    <div class="form-group ">
-                                        <label for="order-email">Email</label>
-                                        <input type="email" class="form-control input" id="order-email" placeholder="">
-                                    </div>
-
-                                    <div class="form-group ">
-                                        <label for="order-tel">Телефон</label>
-                                        <input type="text" class="form-control input" id="order-tel" placeholder="">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="order-adress">Адрес доставки</label>
-                                        <input type="text" class="form-control input" id="order-adress" placeholder="">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="order-comment">Комментарии</label>
-                                        <textarea class="form-control input" id="order-comment"></textarea>
-                                    </div>
-                                </form>
-
-                                <div class="basket-promo__ordering__next">
-                                    <a href="#" class="btn btn__promo btn__promo--simple">Назад</a>
-                                </div>
-
-                                <div class="basket-promo__ordering__total">
-                                    <button class="btn btn__promo">ОФОРМИТЬ заказать</button>
                                 </div>
                             </div>
                         </div>
@@ -713,22 +736,59 @@
         </div>
     </main>
 
-    <div class="modal right fade" id="favourite-side1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal__close modal__close--main">
-            <button type="button" class="btn " data-dismiss="modal">
-                close
-            </button>
-        </div>
-    
-        <div class="modal-dialog">
+    <div class="modal right fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Товар добавлен в корзину</div>
+                </div>
     
-                
+                <div class="modal-body">
+                    <div class="modal__total">
+                        <button type="button" class="btn btn__promo btn__promo--simple" data-dismiss="modal">продолжить покупки</button>
+                        <a href="basket-user.html" class="btn btn__promo">ПЕРЕЙТИ в корзину</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
+    <div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Товар добавлен в корзину</div>
+                </div>
+    
+                <div class="modal-body">
+                    <form class="login__form">
+                        <div class="form-group ">
+                            <label for="order-name"><strong>Имя</strong></label>
+                            <input type="text" class="form-control input" id="order-name" placeholder="">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="order-tel"><strong>Телефон</strong></label>
+                            <input type="text" class="form-control input tel" id="order-tel">
+                        </div>
+    
+                        <div class="form-group">
+                            <div class="checkbox-custom__block">
+                                <input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox" checked>
+                                <label for="checkbox-1" class="checkbox-custom-label">Согласие на обработку данных</label>
+                            </div>
+                        </div>
+    
+                        <div class="form-group">
+                            <button class="btn btn__promo">ЗАКАЗАТЬ ЗВОНОК</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 
     <script src="js/main.js?3"></script>
+
 </body>
 </html>
